@@ -6,4 +6,3 @@ COPY eg eg/
 COPY test test/.
 COPY search search/.
 ENV PYTHONPATH .
-CMD ["pytest", "-v", "test/test_matches.py"]

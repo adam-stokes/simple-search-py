@@ -40,6 +40,11 @@ class RecordResult:
         self.records.append(record)
 
     @property
+    def to_dict(self):
+        """Return dictionary output of results"""
+        return [record.__dict__() for record in self.records]
+
+    @property
     def to_json(self):
         """Return json output of results"""
         return json.dumps([record.__dict__() for record in self.records])
