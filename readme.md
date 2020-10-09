@@ -18,10 +18,12 @@ Searches records and returns their results
 
 # usage
 
-`make build`
-`make test`
-`make SEARCHTERM=life run`
-`make SEARCHTERM=GrEaTeSt run`
+```
+make build
+make test
+make SEARCHTERM=life run
+make SEARCHTERM=GrEaTeSt run
+```
 
 # testing
 `make test`
