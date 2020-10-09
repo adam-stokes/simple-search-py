@@ -19,8 +19,8 @@ def test_string_frequency():
     string = "There is that one person and only that one person"
     record = Record(string)
 
-    assert record.term_frequency["person"] == 2
-    assert record.term_frequency["there"] == 1
+    assert record.term_frequency["person"]["count"] == 2
+    assert record.term_frequency["there"]["count"] == 1
 
 
 def test_string_result_found():
