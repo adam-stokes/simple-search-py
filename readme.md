@@ -20,10 +20,10 @@ Searches records and returns their results
 
 ```
 make build
-make test
+make check
 make SEARCHTERM=life run
 make SEARCHTERM=GrEaTeSt run
 ```
 
 # testing
-`make test`
+`make check`

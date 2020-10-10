@@ -1,6 +1,4 @@
 import string
-import unicodedata
-
 
 def normalize(text):
     """Normalizes the text"""
