@@ -24,9 +24,7 @@ if __name__ == "__main__":
 
     print("")
     print("## RESULTS BASED ON WORD FREQUENCY")
-    count_map = []
-    for record in matches.records:
-        count_map.append((int(record.term_frequency[query]["count"]), record))
-    count_map.sort(key=lambda x:x[0], reverse=True)
-    for count, record in count_map:
-        print(f"ID: {record.id}, Text: {record.text}, Score: {record.term_frequency[query]['count']}")
+
+    matched_rank_records = store.search_by_rank(query)
+    for item in matched_rank_records:
+        print(f"ID: {item[0].id}, Text: {item[0].text}, Score: {item[1]}")

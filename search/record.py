@@ -19,11 +19,8 @@ class Record:
     @property
     def term_frequency(self):
         """Returns dictionary containing the term and their frequency in text.
-
-        XXX: Can be heavily improved using TF-IDF
         """
-        return {term: {"count": self.text.count(term),
-                       "percentage": (self.text.count(term) / len(self.terms)) * 100}
+        return {term: {"count": self.text.count(term)}
                        for term in self.terms}
 
     def __dict__(self):
@@ -32,6 +29,9 @@ class Record:
                                "original_text": self.original_text,
                                "text": self.text,
                                "frequency": self.term_frequency}}
+
+    def __str__(self):
+        return f"<Record: {self.text}, terms: {self.terms}, frequency: {self.term_frequency}>"
 
 
 class RecordResult:
